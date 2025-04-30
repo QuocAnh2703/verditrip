@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdiTrip - Du lịch khám phá</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <div class="head-left">
+            <img src="assets/VerdiTrip.png" alt="logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#" class="active"><i class='bx bx-home'></i> Trang chủ</a></li>
+                <li><a href="#"><i class='bx bx-map-alt'></i> Điểm đến</a></li>
+                <li><a href="#"><i class='bx bx-restaurant'></i> Ẩm thực</a></li>
+                <li><a href="#"><i class='bx bx-calendar-event'></i> Lễ hội</a></li>
+                <li><a href="#"><i class='bx bx-news'></i> Blog</a></li>
+            </ul>
+        </nav>
+        <div class="head-right">
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm...">
+                <i class='bx bx-search'></i>
+            </div>
+            <button>Đăng nhập</button>
+        </div>
+        <div class="menu-icon">
+            <i class="bx bx-menu"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="assets/vietnam.jpg" alt="Background" class="background-img">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>Khám phá Việt Nam</h1>
+                <p>Hành trình trải nghiệm vẻ đẹp đất nước</p>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <section class="destinations">
+            <div class="section-title reveal">
+                <h2>Điểm Đến Nổi Bật</h2>
+                <p>Khám phá những địa điểm tuyệt vời nhất tại Việt Nam</p>
+            </div>
+
+            <div class="carousel reveal">
+
+                <div class="list">
+        
+                    <div class="item" style="background-image: url(assets/hanoi.jpg);">
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>Hà Nội</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.7</span>
+                                    <span><i class='bx bx-user'></i> 120,000 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>Thủ đô ngàn năm văn hiến với sự kết hợp hài hòa giữa vẻ đẹp cổ kính và hiện đại, nơi du khách có thể cảm nhận được hồn Việt qua từng con phố</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="item" style="background-image: url(assets/danang.jpg);">
+                        
+                        <!-- <div class="content">
+                            <div class="title">SLIDER</div>
+                            <div class="name">Đà Nẵng</div>
+                            <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div class="btn">
+                                <button>See More</button>
+                                <button>Subscribe</button>
+                            </div>
+                        </div> -->
+
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>Đà Nẵng</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.5</span>
+                                    <span><i class='bx bx-user'></i> 99,999 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>Tựa viên ngọc sáng giữa đất trời miền Trung, Đà Nẵng mê hoặc du khách bởi sự kết hợp tuyệt vời giữa thiên nhiên kỳ vĩ và nhịp sống hiện đại</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+        
+                    <div class="item" style="background-image: url(assets/hoian.jpg);">
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>Hội An</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.9</span>
+                                    <span><i class='bx bx-user'></i> 85,000 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>Phố cổ lung linh ánh đèn lồng đầy màu sắc, kiến trúc cổ kính và không gian yên bình, nơi thời gian như ngừng lại giữa nhịp sống hiện đại</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="item" style="background-image: url(assets/ninhbinh.jpg);">
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>Ninh Bình</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.6</span>
+                                    <span><i class='bx bx-user'></i> 65,000 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>Vùng đất cố đô Hoa Lư với những dãy núi đá vôi hùng vĩ, sông nước uốn lượn bao quanh tạo nên khung cảnh "Hạ Long trên cạn" tuyệt đẹp</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="item" style="background-image: url(assets/sapa.jpg);">
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>Sapa</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.7</span>
+                                    <span><i class='bx bx-user'></i> 78,000 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>Thiên đường săn mây với những thửa ruộng bậc thang tuyệt đẹp, khí hậu se lạnh và nét văn hóa độc đáo của đồng bào dân tộc thiểu số</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="item" style="background-image: url(assets/halong.jpg);">
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>Vịnh Hạ Long</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.8</span>
+                                    <span><i class='bx bx-user'></i> 150,000 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>Di sản thiên nhiên thế giới với hàng nghìn đảo đá vôi tuyệt đẹp, nơi hội tụ của những trải nghiệm độc đáo trên vịnh biển</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="item" style="background-image: url(assets/nhatrang.jpg);">
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>Nha Trang</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.5</span>
+                                    <span><i class='bx bx-user'></i> 95,000 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>Thiên đường biển với bãi cát trắng mịn, nước biển xanh trong và chuỗi đảo xinh đẹp, nơi lý tưởng để thưởng thức ẩm thực hải sản tươi ngon</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="item" style="background-image: url(assets/phuquoc.jpg);">
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>Phú Quốc</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.6</span>
+                                    <span><i class='bx bx-user'></i> 88,000 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>"Đảo Ngọc" với những bãi biển hoang sơ, nước biển trong xanh cùng các khu nghỉ dưỡng sang trọng và ẩm thực phong phú, đặc biệt là nước mắm nổi tiếng</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="item" style="background-image: url(assets/hochiminh.jpg);">
+                        <div class="content">
+                            <div class="city-info">
+                                <h2>TP Hồ Chí Minh</h2>
+                                <div class="city-stats">
+                                    <span><i class='bx bxs-star'></i> 4.6</span>
+                                    <span><i class='bx bx-user'></i> 180,000 Visited</span>
+                                    <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                                </div>
+                                <p>Thành phố sôi động nhất cả nước với nhịp sống hiện đại, ẩm thực phong phú và đa dạng văn hóa, nơi giao thoa giữa các giá trị truyền thống và hiện đại</p>
+                                <div class="city-actions">
+                                    <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                    <button class="btn-explore"><i class='bx bx-map'></i> Xem chi tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- <div class="item" style="background-image: url(image/butterfly2.jpg);">
+                        
+                        <div class="content">
+                            <div class="title">SLIDER</div>
+                            <div class="name">BUTTERFLY</div>
+                            <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div class="btn">
+                                <button>See More</button>
+                                <button>Subscribe</button>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="item" style="background-image: url(image/parrot2.jpg);">
+                        
+                        <div class="content">
+                            <div class="title">SLIDER</div>
+                            <div class="name">PARROT</div>
+                            <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div class="btn">
+                                <button>See More</button>
+                                <button>Subscribe</button>
+                            </div>
+                        </div>
+        
+                    </div> -->
+        
+                </div>
+        
+                <!--next prev button-->
+                <div class="arrows">
+                    <button class="prev"><</button>
+                    <button class="next">></button>
+                </div>
+        
+        
+                <!-- time running -->
+                <div class="timeRunning"></div>
+        
+            </div>
+            <!-- <div class="carousel">
+
+                <div class="list">
+
+                    <div class="item" style="background-image: url(assets/hanoi.jpg);">
+
+                    </div>
+
+                    <div class="item" style="background-image: url(assets/danang.jpg);">
+                        
+                    </div>
+
+                    <div class="item" style="background-image: url(assets/hochiminh.jpg);">
+                        
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="city-slider">
+                <div class="city-slide active" data-city="danang">
+                    <div class="background-wrap">
+                        <img src="assets/danang.jpg" alt="Đà Nẵng" class="background-img">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="content">
+                        <div class="city-info">
+                            <h2>Đà Nẵng</h2>
+                            <div class="city-stats">
+                                <span><i class='bx bxs-star'></i> 4.5</span>
+                                <span><i class='bx bx-user'></i> 99,999 Visited</span>
+                                <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                            </div>
+                            <p>Tựa viên ngọc sáng giữa đất trời miền Trung, Đà Nẵng mê hoặc du khách bởi sự kết hợp tuyệt vời giữa thiên nhiên kỳ vĩ và nhịp sống hiện đại</p>
+                            <div class="city-actions">
+                                <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                <button class="btn-explore"><i class='bx bx-map'></i> Khám phá</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-slide" data-city="halong">
+                    <div class="background-wrap">
+                        <img src="assets/halong.jpg" alt="Hạ Long" class="background-img">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="content">
+                        <div class="city-info">
+                            <h2>Vịnh Hạ Long</h2>
+                            <div class="city-stats">
+                                <span><i class='bx bxs-star'></i> 4.8</span>
+                                <span><i class='bx bx-user'></i> 150,000 Visited</span>
+                                <span class="hot-tag"><i class='bx bxs-hot'></i> Hot</span>
+                            </div>
+                            <p>Di sản thiên nhiên thế giới với hàng nghìn đảo đá vôi tuyệt đẹp, nơi hội tụ của những trải nghiệm độc đáo trên vịnh biển</p>
+                            <div class="city-actions">
+                                <button class="btn-video"><i class='bx bx-play-circle'></i> Xem video</button>
+                                <button class="btn-explore"><i class='bx bx-map'></i> Khám phá</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-nav">
+                <button class="nav-dot active" data-city="danang"></button>
+                <button class="nav-dot" data-city="halong"></button>
+            </div>
+
+            <div class="city-arrows">
+                <button class="arrow-prev"><i class='bx bx-chevron-left'></i></button>
+                <button class="arrow-next"><i class='bx bx-chevron-right'></i></button>
+            </div> -->
+        </section>
+
+        <div class="section-separator"></div>
+
+        <!-- Thêm section mới: Dịch vụ đặc biệt -->
+        <section class="special-services">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Trải Nghiệm Nổi Bật</h2>
+                    <p>Khám phá những trải nghiệm độc đáo tại Việt Nam</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card reveal reveal-left delay-200">
+                        <div class="service-icon">
+                            <i class='bx bx-map-alt'></i>
+                        </div>
+                        <h3>Khám phá thiên nhiên</h3>
+                        <p>Thông tin về các địa điểm thiên nhiên tuyệt đẹp tại Việt Nam từ vịnh Hạ Long đến đồng bằng sông Cửu Long</p>
+                        <a href="#" class="service-link">Xem thêm <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                    
+                    <div class="service-card reveal delay-400">
+                        <div class="service-icon">
+                            <i class='bx bx-restaurant'></i>
+                        </div>
+                        <h3>Ẩm thực đặc sắc</h3>
+                        <p>Khám phá nền ẩm thực phong phú của Việt Nam với những món ăn truyền thống và hiện đại</p>
+                        <a href="#" class="service-link">Xem thêm <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                    
+                    <div class="service-card reveal reveal-right delay-600">
+                        <div class="service-icon">
+                            <i class='bx bx-landscape'></i>
+                        </div>
+                        <h3>Di sản văn hóa</h3>
+                        <p>Thông tin về các di tích lịch sử, lễ hội truyền thống và nét đẹp văn hóa độc đáo của Việt Nam</p>
+                        <a href="#" class="service-link">Xem thêm <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <!-- Thêm section khóa học/chương trình du lịch theo phong cách The Forum -->
+        <section class="featured-programs">
+            <div class="program-container">
+                <div class="program-content">
+                    <div class="program-text reveal reveal-left">
+                        <h2 class="program-title">KHÁM PHÁ</h2>
+                        <div class="program-subtitle">Điểm Đến</div>
+                        <div class="program-highlight">NỔI BẬT</div>
+                        <div class="program-desc reveal delay-200">
+                            <p>VerdiTrip mang đến những thông tin du lịch chi tiết với những điểm đến tuyệt vời nhất Việt Nam. Hãy cùng chúng tôi khám phá vẻ đẹp thiên nhiên, văn hóa và ẩm thực đặc sắc của đất nước hình chữ S.</p>
+                            <a href="#" class="program-button">Khám Phá Ngay</a>
+                        </div>
+                    </div>
+                    <div class="program-image reveal reveal-right">
+                        <img src="assets/halong.jpg" alt="Vịnh Hạ Long">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <!-- Thêm section "Về chúng tôi" tương tự The Forum -->
+        <section class="about-us">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-image reveal reveal-left">
+                        <img src="assets/vietnam.jpg" alt="Cảnh đẹp Việt Nam">
+                        <div class="about-badge">
+                            <span>5+ Năm</span>
+                            <span>Kinh Nghiệm</span>
+                        </div>
+                    </div>
+                    <div class="about-content reveal reveal-right">
+                        <h2 class="about-title">Về chúng tôi</h2>
+                        <div class="about-text">
+                            <p>VerdiTrip là nền tảng quảng bá du lịch hàng đầu tại Việt Nam, cung cấp thông tin đa dạng về các điểm du lịch, khách sạn, nhà hàng và hoạt động giải trí.</p>
+                            <p>Chúng tôi giới thiệu đến du khách những địa điểm đẹp nhất, những trải nghiệm đáng nhớ nhất và những nét văn hóa độc đáo của Việt Nam.</p>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">10K+</div>
+                                    <div class="stat-label">Bài viết</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">150+</div>
+                                    <div class="stat-label">Điểm đến</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">30+</div>
+                                    <div class="stat-label">Tỉnh thành</div>
+                                </div>
+                            </div>
+                            <a href="#" class="about-button">Tìm Hiểu Thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/VerdiTrip.png" alt="logo">
+                    <p>Khám phá vẻ đẹp Việt Nam cùng VerdiTrip</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>Về chúng tôi</h3>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Quyền riêng tư</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Khám phá</h3>
+                        <ul>
+                            <li><a href="#">Điểm du lịch</a></li>
+                            <li><a href="#">Ẩm thực</a></li>
+                            <li><a href="#">Lễ hội văn hóa</a></li>
+                            <li><a href="#">Cẩm nang du lịch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61575549620875" class="social-link"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.instagram.com/verditrip_12/" class="social-link"><i class='bx bxl-instagram'></i></a>
+                            <a href="#" class="social-link"><i class='bx bxl-youtube'></i></a>
+                            <a href="#" class="social-link"><i class='bx bxl-tiktok'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VerdiTrip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <script src="carousel-fix.js"></script>
+</body>
+</html>
