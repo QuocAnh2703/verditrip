@@ -1,26 +1,42 @@
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle if the elements exist
+    // Tạo overlay cho sidebar
+    const sidebarOverlay = document.createElement('div');
+    sidebarOverlay.className = 'sidebar-overlay';
+    document.body.appendChild(sidebarOverlay);
+    
+    // Mobile menu toggle
     const menuIcon = document.querySelector('.menu-icon');
-    if (menuIcon) {
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (menuIcon && sidebar) {
         menuIcon.addEventListener('click', function() {
-            const sidebar = document.querySelector('.sidebar');
-            if (sidebar) sidebar.classList.add('open-sidebar');
+            sidebar.classList.add('open-sidebar');
+            sidebarOverlay.classList.add('active');
         });
     }
 
     const closeIcon = document.querySelector('.close-icon');
-    if (closeIcon) {
+    if (closeIcon && sidebar) {
         closeIcon.addEventListener('click', function() {
-            const sidebar = document.querySelector('.sidebar');
-            if (sidebar) {
-                sidebar.classList.add('close-sidebar');
-                setTimeout(() => {
-                    sidebar.classList.remove('close-sidebar');
-                    sidebar.classList.remove('open-sidebar');
-                }, 1000);
-            }
+            closeSidebar();
         });
+    }
+    
+    // Đóng sidebar khi click vào overlay
+    sidebarOverlay.addEventListener('click', function() {
+        closeSidebar();
+    });
+    
+    // Hàm đóng sidebar
+    function closeSidebar() {
+        sidebar.classList.add('close-sidebar');
+        sidebarOverlay.classList.remove('active');
+        
+        setTimeout(() => {
+            sidebar.classList.remove('close-sidebar');
+            sidebar.classList.remove('open-sidebar');
+        }, 300);
     }
 
     // Header scroll effect
@@ -36,31 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Search functionality
-    const searchIcon = document.querySelector('.search-icon');
-    const searchForm = document.querySelector('.search-form');
+    const searchIcon = document.querySelector('.search i');
+    const searchInput = document.querySelector('.search input');
     
-    if (searchIcon && searchForm) {
-        const searchOverlay = document.createElement('div');
-        searchOverlay.className = 'search-overlay';
-        document.body.appendChild(searchOverlay);
-
+    if (searchIcon && searchInput) {
         searchIcon.addEventListener('click', function() {
-            searchForm.classList.add('active');
-            searchOverlay.classList.add('active');
-            searchForm.querySelector('input').focus();
-        });
-
-        searchOverlay.addEventListener('click', function() {
-            searchForm.classList.remove('active');
-            searchOverlay.classList.remove('active');
-        });
-
-        // Close search when pressing Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                searchForm.classList.remove('active');
-                searchOverlay.classList.remove('active');
-            }
+            searchInput.focus();
         });
     }
 

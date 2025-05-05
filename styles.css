@@ -6,17 +6,20 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: #ffffff;
+    color: var(--text-dark);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -90,15 +93,17 @@ section {
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
     font-size: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Destinations Section */
 .destinations {
-    background-color: var(--bg-darker);
+    background-color: #f8f9fa;
     position: relative;
     padding-top: 60px;
     padding-bottom: 80px;
@@ -111,7 +116,7 @@ section {
     left: 0;
     width: 100%;
     height: 50px;
-    background: linear-gradient(to bottom, transparent, var(--bg-darker));
+    background: linear-gradient(to bottom, transparent, #f8f9fa);
     z-index: 10;
 }
 
@@ -123,13 +128,12 @@ section {
 
 .section-title h2 {
     font-size: 38px;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 .section-title p {
-    font-size: 18px;
     color: var(--text-dim);
     max-width: 600px;
     margin: 0 auto;
@@ -158,6 +162,7 @@ section {
     font-size: 3.5rem;
     margin-bottom: 20px;
     font-weight: 700;
+    color: #2c3e50;
 }
 
 .city-stats {
@@ -171,6 +176,7 @@ section {
     display: flex;
     align-items: center;
     gap: 5px;
+    color: #2c3e50;
 }
 
 .city-stats .hot-tag {
@@ -185,6 +191,7 @@ section {
     line-height: 1.6;
     margin-bottom: 30px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #2c3e50;
 }
 
 .btn-video {
@@ -375,9 +382,9 @@ section {
     width: 50px;
     height: 50px;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--primary-dark);
     transition: all 0.3s ease;
     border-radius: 50%;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
@@ -392,10 +399,8 @@ section {
 }
 
 .arrows button:hover {
-    background-color: #00b4d8;
+    background-color: var(--primary);
     color: white;
-    border-color: transparent;
-    transform: scale(1.1);
 }
 
 /* time running */
@@ -404,7 +409,7 @@ section {
     z-index: 1000;
     width: 0%;
     height: 4px;
-    background-color: #14ff72cb;
+    background-color: var(--primary);
     left: 0;
     top: 0;
     animation: runningTime 7s linear 1 forwards;
@@ -468,11 +473,11 @@ section {
     --green: #2ecc71;  /* Xanh lá - thiên nhiên */
     --text-light: #ffffff;
     --text-dark: #2c3e50;
-    --text-dim: rgba(255, 255, 255, 0.8);
+    --text-dim: #6c757d; /* Thay đổi thành màu xám tối thay vì trắng mờ */
     --bg-light: #f8f9fa;
     --header-bg: rgba(255, 255, 255, 0.95);
-    --bg-dark: #0f172a;  /* Màu nền tối - navy blue */
-    --bg-darker: #0c1322;
+    --bg-dark: #ffffff;  /* Đổi thành màu trắng */
+    --bg-darker: #f8f9fa; /* Đổi thành màu xám nhạt */
     --overlay-bg: rgba(15, 23, 42, 0.6);
     --transition: all 0.3s ease;
 }
@@ -527,6 +532,7 @@ section {
 .nav-menu a i {
     font-size: 16px;
     transition: transform 0.3s ease;
+    color: var(--primary);
 }
 
 /* Hiệu ứng hover */
@@ -625,8 +631,7 @@ button {
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+    background: var(--primary-dark);
 }
 
 .search {
@@ -690,7 +695,7 @@ button:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--bg-dark);
+    background-color: #343a40;
     color: var(--text-light);
     padding: 60px 0 20px;
     margin-top: auto;
@@ -722,7 +727,7 @@ button:hover {
 }
 
 .footer-logo p {
-    color: var(--text-dim);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
 }
 
@@ -750,7 +755,7 @@ button:hover {
 }
 
 .footer-section ul li a {
-    color: var(--text-dim);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
@@ -780,8 +785,8 @@ button:hover {
 }
 
 .social-link:hover {
-    background: var(--primary);
-    transform: translateY(-3px);
+    background-color: var(--primary);
+    color: white;
 }
 
 .footer-bottom {
@@ -791,7 +796,7 @@ button:hover {
 }
 
 .footer-bottom p {
-    color: var(--text-dim);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 13px;
 }
 
@@ -975,10 +980,10 @@ main {
 
 /* Section Separator và Scroll Effects */
 .section-separator {
-    height: 100px;
+    height: 50px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    background-color: transparent;
 }
 
 .section-separator::before {
@@ -988,7 +993,7 @@ main {
     left: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, transparent, var(--primary), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
 }
 
 /* Scroll reveal animations */
@@ -1036,7 +1041,7 @@ main {
 
 /* Special Services Section */
 .special-services {
-    background-color: var(--bg-dark);
+    background-color: #ffffff;
     padding: 80px 0;
 }
 
@@ -1054,38 +1059,38 @@ main {
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.05);
+    background-color: #f8f9fa;
     border-radius: 10px;
     padding: 35px 25px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     height: 100%;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    background: rgba(0, 180, 216, 0.1);
-    border-color: var(--primary);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-light);
 }
 
 .service-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto 20px;
-    background: var(--primary);
+    background-color: rgba(0, 180, 216, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--primary);
     font-size: 36px;
-    box-shadow: 0 10px 20px rgba(0, 180, 216, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 180, 216, 0.15);
 }
 
 .service-card h3 {
-    color: var(--text-light);
+    color: var(--text-dark);
     font-size: 22px;
     margin-bottom: 15px;
     font-weight: 600;
@@ -1109,7 +1114,7 @@ main {
 }
 
 .service-link:hover {
-    color: var(--primary-light);
+    color: var(--primary-dark);
 }
 
 .service-link i {
@@ -1179,7 +1184,7 @@ main {
 .program-title {
     font-size: 48px;
     font-weight: 800;
-    color: #2c3e50;
+    color: var(--text-dark);
     margin-bottom: 0;
     line-height: 1.1;
     text-shadow: 1px 1px 0px rgba(0, 180, 216, 0.2);
@@ -1190,7 +1195,7 @@ main {
     font-size: 36px;
     font-weight: 500;
     font-style: italic;
-    color: #555;
+    color: var(--text-dark);
     margin: 5px 0;
 }
 
@@ -1198,8 +1203,8 @@ main {
     display: inline-block;
     font-size: 64px;
     font-weight: 900;
-    color: #fff;
-    background: linear-gradient(45deg, #00b4d8, #0077b6);
+    color: #ffffff;
+    background: linear-gradient(45deg, var(--primary), var(--primary-dark));
     padding: 5px 40px;
     border-radius: 10px;
     margin-top: 10px;
@@ -1217,7 +1222,7 @@ main {
 .program-desc p {
     font-size: 17px;
     line-height: 1.8;
-    color: #4a4a4a;
+    color: var(--text-dim);
     margin-bottom: 30px;
     max-width: 95%;
 }
@@ -1343,7 +1348,7 @@ main {
 
 /* About Us Section - Tương tự The Forum */
 .about-us {
-    background-color: var(--bg-dark);
+    background-color: #ffffff;
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -1392,7 +1397,7 @@ main {
     position: absolute;
     top: 30px;
     right: 30px;
-    background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+    background: var(--primary);
     color: white;
     border-radius: 10px;
     padding: 15px;
@@ -1422,7 +1427,7 @@ main {
 .about-title {
     font-size: 42px;
     font-weight: 700;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 25px;
     position: relative;
     display: inline-block;
@@ -1437,9 +1442,8 @@ main {
     height: 3px;
     background: linear-gradient(90deg, var(--primary), var(--primary-light));
 }
-
 .about-text {
-    color: var(--text-dim);
+    color: var(--text-dark);
     font-size: 16px;
     line-height: 1.8;
 }
@@ -1456,11 +1460,11 @@ main {
 }
 
 .stat-item {
-    background: rgba(255, 255, 255, 0.05);
+    background-color: #f8f9fa;
     border-radius: 10px;
     padding: 20px 15px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
@@ -1479,14 +1483,14 @@ main {
 
 .stat-label {
     font-size: 14px;
-    color: var(--text-light);
+    color: var(--text-dim);
     opacity: 0.8;
 }
 
 .about-button {
     display: inline-block;
-    background-color: transparent;
-    color: var(--primary);
+    background-color: var(--primary);
+    color: white;
     font-size: 16px;
     font-weight: 600;
     padding: 12px 30px;
@@ -1498,7 +1502,7 @@ main {
 }
 
 .about-button:hover {
-    background-color: var(--primary);
+    background-color: var(--primary-dark);
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 180, 216, 0.3);
@@ -1553,4 +1557,335 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+/* Thêm CSS cho menu-icon và mobile navigation */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    padding: 60px 20px 20px;
+    overflow-y: auto;
+}
+
+.sidebar.open-sidebar {
+    right: 0;
+}
+
+.sidebar.close-sidebar {
+    animation: slideOut 0.3s forwards;
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover, 
+.sidebar ul li a.active {
+    color: var(--primary);
+}
+
+.sidebar ul li a i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+/* Cải thiện responsive cho header */
+@media screen and (max-width: 992px) {
+    header {
+        grid-template-columns: auto 1fr auto;
+        padding: 5px 15px;
+    }
+    
+    .head-right .search {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        grid-template-columns: auto 1fr auto;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .head-right button {
+        display: none;
+    }
+    
+    .head-right .search {
+        width: 150px;
+    }
+    
+    /* Điều chỉnh kích thước carousel */
+    .carousel {
+        height: 70vh;
+    }
+    
+    .carousel .list .item .content .city-info {
+        margin-left: 10px;
+        padding: 15px;
+        max-width: 320px;
+    }
+    
+    .carousel .list .item .content .city-info h2 {
+        font-size: 28px;
+    }
+    
+    .carousel .list .item .content .city-info p {
+        font-size: 14px;
+    }
+    
+    /* Điều chỉnh kích thước hero */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    /* Điều chỉnh kích thước about-us */
+    .about-badge {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+    
+    .about-badge span:first-child {
+        font-size: 18px;
+    }
+    
+    .about-badge span:last-child {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        padding: 5px 10px;
+    }
+    
+    .head-left img {
+        height: 28px;
+    }
+    
+    .head-right .search {
+        width: 120px;
+    }
+    
+    /* Thiết lập lại kích thước carousel */
+    .carousel {
+        height: 60vh;
+    }
+    
+    .carousel .list .item .content {
+        left: 10px;
+        width: 85%;
+    }
+    
+    .carousel .list .item .content .city-info {
+        max-width: 280px;
+        padding: 12px;
+    }
+    
+    .carousel .list .item .content .city-info h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .carousel .list .item .content .city-stats {
+        gap: 10px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .carousel .list .item .content .city-info p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    .carousel .list .item .content .city-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .carousel .list .item .content .city-actions button {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    /* Điều chỉnh kích thước hero */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Điều chỉnh các section */
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 28px;
+    }
+    
+    .section-title p {
+        font-size: 14px;
+    }
+    
+    /* Program section */
+    .program-title {
+        font-size: 28px;
+    }
+    
+    .program-subtitle {
+        font-size: 20px;
+    }
+    
+    .program-highlight {
+        font-size: 28px;
+        padding: 5px 20px;
+    }
+    
+    .program-desc p {
+        font-size: 14px;
+    }
+    
+    .program-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Thêm overlay và keyframes cho sidebar */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes slideOut {
+    from {
+        right: 0;
+    }
+    to {
+        right: -300px;
+    }
+}
+
+/* Thêm CSS cho header khi scroll và mobile responsive */
+
+/* Header khi scroll */
+header.scrolled {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+/* Điều chỉnh mobile */
+@media screen and (max-width: 576px) {
+    .arrows {
+        padding: 0 15px;
+    }
+    
+    .arrows button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    /* Điều chỉnh section padding */
+    section {
+        padding: 50px 0;
+    }
+    
+    /* Điều chỉnh grid gaps */
+    .services-grid {
+        gap: 20px;
+    }
+    
+    /* Điều chỉnh card padding */
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    /* Đảm bảo images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 
