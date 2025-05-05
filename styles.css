@@ -7,6 +7,8 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -20,6 +22,8 @@ body {
     flex-direction: column;
     max-width: 100vw;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Header */
@@ -42,8 +46,9 @@ header {
 /* Sections */
 section {
     position: relative;
-    padding: 80px 0;
+    padding: 60px 0;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .background-wrap {
@@ -124,6 +129,8 @@ section {
     text-align: center;
     margin-bottom: 50px;
     position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .section-title h2 {
@@ -213,73 +220,44 @@ section {
     background: var(--primary-dark);
 }
 
-.carousel{
-    width: 100vw;
-    height: 100vh;
-    margin-top: -50px;
-    overflow: hidden;
+.carousel {
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     position: relative;
 }
 
-.carousel .list .item{
-    width: 180px;
-    height: 250px;
-    position: absolute;
-    top: 80%;
-    transform: translateY(-70%);
-    left: 70%;
-    border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-    background-position: 50% 50%;
-    background-size: cover;
-    z-index: 100;
-    transition: 1s;
-}
-
-.carousel .list .item:nth-child(1),
-.carousel .list .item:nth-child(2){
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-    border-radius: 0;
+.carousel .list {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
-.carousel .list .item:nth-child(3){
-    left: 67%;
-}
-
-.carousel .list .item:nth-child(4){
-    left: calc(67% + 200px);
-}
-
-.carousel .list .item:nth-child(5){
-    left: calc(67% + 400px);
-}
-
-.carousel .list .item:nth-child(6){
-    left: calc(67% + 600px);
-}
-
-.carousel .list .item:nth-child(n+7){
-    left: calc(67% + 800px);
-    opacity: 0;
-}
-
-.list .item .content{
+.carousel .list .item {
     position: absolute;
-    top: 50%;
-    left: 100px;
-    transform: translateY(-50%);
-    width: 400px;
-    text-align: left;
-    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: none;
 }
 
-.list .item:nth-child(2) .content{
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2) {
     display: block;
+}
+
+.list .item .content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    padding: 0 50px;
+    box-sizing: border-box;
 }
 
 .content .title{
@@ -367,15 +345,10 @@ section {
 
 .arrows{
     position: absolute;
-    z-index: 1000 !important;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0 30px;
+    width: 100%;
+    z-index: 100;
 }
 
 .arrows button {
@@ -412,7 +385,6 @@ section {
     background-color: var(--primary);
     left: 0;
     top: 0;
-    animation: runningTime 7s linear 1 forwards;
 }
 
 @keyframes runningTime {
@@ -487,6 +459,10 @@ section {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: auto;
 }
 
 .head-left {
@@ -702,7 +678,9 @@ button:hover {
 }
 
 .footer .container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -802,20 +780,22 @@ button:hover {
 
 main {
     flex: 1;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 /* Thêm khung và màu nền cho phần thông tin thành phố */
 .carousel .list .item .content .city-info {
-    max-width: 450px;
-    margin-left: 40px;
-    transform: translateY(0);
-    animation: fadeIn 0.7s ease forwards;
-    background: rgba(255, 255, 255, 0.85); /* Nền trắng trong suốt */
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
     border-radius: 10px;
-    padding: 25px;
     backdrop-filter: blur(8px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border-left: 3px solid #00b4d8; /* Giữ viền xanh biển */
+    border-left: 3px solid #00b4d8;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 450px;
 }
 
 /* Điều chỉnh màu chữ cho phù hợp với nền trắng */
@@ -947,34 +927,154 @@ main {
 
 /* Đảm bảo hình ảnh được hiển thị đẹp */
 .carousel .list .item {
-    background-size: cover;
+    width: 100%;
+    height: 100%;
     background-position: center;
+    background-size: cover;
+}
+
+.carousel .list .item:nth-child(3),
+.carousel .list .item:nth-child(4),
+.carousel .list .item:nth-child(5),
+.carousel .list .item:nth-child(6),
+.carousel .list .item:nth-child(n+7) {
+    display: none;
 }
 
 /* Đảm bảo nội dung hiển thị đúng trên mobile */
 @media screen and (max-width: 768px) {
+    .carousel {
+        height: 70vh;
+    }
+    
+    .carousel .list .item:nth-child(1),
+    .carousel .list .item:nth-child(2) {
+        height: 70vh;
+    }
+    
+    .carousel .list .item {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        object-fit: cover;
+    }
+    
     .carousel .list .item .content {
-        left: 20px;
-        width: 90%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
     }
     
     .carousel .list .item .content .city-info {
-        margin-left: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .carousel {
+        height: 60vh;
+    }
+    
+    .carousel .list .item:nth-child(1),
+    .carousel .list .item:nth-child(2) {
+        height: 60vh;
+    }
+    
+    .carousel .list .item {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        object-fit: cover;
+    }
+    
+    .carousel .list .item .content {
+        left: 10px;
+        width: 85%;
+    }
+    
+    .carousel .list .item .content .city-info {
         padding: 15px;
-        max-width: 400px;
+        max-width: 300px;
     }
     
     .carousel .list .item .content .city-info h2 {
-        font-size: 32px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
     
     .carousel .list .item .content .city-info p {
-        font-size: 14px;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    .carousel .list .item .content .city-actions {
+        flex-direction: column;
+        gap: 10px;
     }
     
     .carousel .list .item .content .city-actions button {
-        padding: 10px 16px;
+        width: 100%;
+        padding: 8px 12px;
         font-size: 13px;
+    }
+    
+    .section-title h2 {
+        font-size: 26px;
+    }
+    
+    .section-title p {
+        font-size: 14px;
+    }
+    
+    .program-title {
+        font-size: 28px;
+    }
+    
+    .program-subtitle {
+        font-size: 20px;
+    }
+    
+    .program-highlight {
+        font-size: 28px;
+        padding: 5px 20px;
+    }
+    
+    .program-desc p {
+        font-size: 14px;
+    }
+    
+    .program-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    
+    .footer-content {
+        display: block;
+    }
+    
+    .footer-logo {
+        margin-bottom: 30px;
+    }
+    
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    header {
+        grid-template-columns: auto 1fr auto;
+        padding: 5px 15px;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -1174,6 +1274,8 @@ main {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .program-text {
@@ -1371,6 +1473,8 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .about-image {
@@ -1560,32 +1664,39 @@ main {
 
 /* Thêm CSS cho menu-icon và mobile navigation */
 .menu-icon {
+    width: 35px;
+    height: 35px;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon i {
     font-size: 24px;
     color: var(--primary);
 }
 
+/* Thiết lập sidebar mặc định */
 .sidebar {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 250px;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
     height: 100vh;
     background-color: white;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 1001;
     transition: right 0.3s ease;
-    padding: 60px 20px 20px;
+    padding: 80px 20px 20px;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
 .sidebar.open-sidebar {
     right: 0;
-}
-
-.sidebar.close-sidebar {
-    animation: slideOut 0.3s forwards;
 }
 
 .close-icon {
@@ -1597,6 +1708,63 @@ main {
     color: var(--primary);
 }
 
+/* Sidebar overlay */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive menu */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: flex;
+    }
+    
+    .head-right button {
+        display: none;
+    }
+    
+    /* Điều chỉnh header spacing */
+    header {
+        grid-template-columns: auto 1fr auto;
+        padding: 5px 15px;
+    }
+}
+
+/* Fixed position header on mobile */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 5px 15px;
+    }
+    
+    .head-right .search {
+        width: 120px;
+    }
+    
+    .sidebar {
+        width: 85%;
+        max-width: 280px;
+    }
+}
+
+/* Thêm lại CSS cho sidebar menu */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -1614,8 +1782,9 @@ main {
     color: var(--text-dark);
     text-decoration: none;
     font-size: 16px;
-    padding: 10px 0;
+    padding: 12px 0;
     transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .sidebar ul li a:hover, 
@@ -1628,58 +1797,11 @@ main {
     color: var(--primary);
 }
 
-/* Cải thiện responsive cho header */
-@media screen and (max-width: 992px) {
-    header {
-        grid-template-columns: auto 1fr auto;
-        padding: 5px 15px;
-    }
-    
-    .head-right .search {
-        width: 150px;
-    }
-}
-
+/* Thêm lại một số responsive styles */
 @media screen and (max-width: 768px) {
-    header {
-        grid-template-columns: auto 1fr auto;
-    }
-    
-    .nav-menu {
-        display: none;
-    }
-    
-    .menu-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .head-right button {
-        display: none;
-    }
-    
-    .head-right .search {
-        width: 150px;
-    }
-    
     /* Điều chỉnh kích thước carousel */
     .carousel {
         height: 70vh;
-    }
-    
-    .carousel .list .item .content .city-info {
-        margin-left: 10px;
-        padding: 15px;
-        max-width: 320px;
-    }
-    
-    .carousel .list .item .content .city-info h2 {
-        font-size: 28px;
-    }
-    
-    .carousel .list .item .content .city-info p {
-        font-size: 14px;
     }
     
     /* Điều chỉnh kích thước hero */
@@ -1690,60 +1812,33 @@ main {
     .hero-content p {
         font-size: 1.2rem;
     }
-    
-    /* Điều chỉnh kích thước about-us */
-    .about-badge {
-        top: 10px;
-        right: 10px;
-        padding: 8px;
-    }
-    
-    .about-badge span:first-child {
-        font-size: 18px;
-    }
-    
-    .about-badge span:last-child {
-        font-size: 12px;
-    }
 }
 
 @media screen and (max-width: 576px) {
-    header {
-        padding: 5px 10px;
+    /* Fixed dimensions cho một số thành phần */
+    .carousel, 
+    .hero {
+        height: 500px;
     }
     
-    .head-left img {
-        height: 28px;
+    /* Điều chỉnh kích thước hero */
+    .hero-content h1 {
+        font-size: 2rem;
     }
     
-    .head-right .search {
-        width: 120px;
+    .hero-content p {
+        font-size: 1rem;
     }
     
-    /* Thiết lập lại kích thước carousel */
-    .carousel {
-        height: 60vh;
-    }
-    
-    .carousel .list .item .content {
-        left: 10px;
-        width: 85%;
-    }
-    
+    /* Điều chỉnh vị trí city-info */
     .carousel .list .item .content .city-info {
-        max-width: 280px;
-        padding: 12px;
+        padding: 15px;
+        max-width: 300px;
     }
     
     .carousel .list .item .content .city-info h2 {
         font-size: 24px;
         margin-bottom: 10px;
-    }
-    
-    .carousel .list .item .content .city-stats {
-        gap: 10px;
-        margin-bottom: 10px;
-        flex-wrap: wrap;
     }
     
     .carousel .list .item .content .city-info p {
@@ -1760,131 +1855,6 @@ main {
         width: 100%;
         padding: 8px 12px;
         font-size: 13px;
-    }
-    
-    /* Điều chỉnh kích thước hero */
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-content p {
-        font-size: 1rem;
-    }
-    
-    /* Điều chỉnh các section */
-    section {
-        padding: 60px 0;
-    }
-    
-    .section-title h2 {
-        font-size: 28px;
-    }
-    
-    .section-title p {
-        font-size: 14px;
-    }
-    
-    /* Program section */
-    .program-title {
-        font-size: 28px;
-    }
-    
-    .program-subtitle {
-        font-size: 20px;
-    }
-    
-    .program-highlight {
-        font-size: 28px;
-        padding: 5px 20px;
-    }
-    
-    .program-desc p {
-        font-size: 14px;
-    }
-    
-    .program-button {
-        padding: 10px 25px;
-        font-size: 14px;
-    }
-    
-    /* Footer */
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .footer-links {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-/* Thêm overlay và keyframes cho sidebar */
-.sidebar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.sidebar-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-@keyframes slideOut {
-    from {
-        right: 0;
-    }
-    to {
-        right: -300px;
-    }
-}
-
-/* Thêm CSS cho header khi scroll và mobile responsive */
-
-/* Header khi scroll */
-header.scrolled {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.98);
-}
-
-/* Điều chỉnh mobile */
-@media screen and (max-width: 576px) {
-    .arrows {
-        padding: 0 15px;
-    }
-    
-    .arrows button {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-    
-    /* Điều chỉnh section padding */
-    section {
-        padding: 50px 0;
-    }
-    
-    /* Điều chỉnh grid gaps */
-    .services-grid {
-        gap: 20px;
-    }
-    
-    /* Điều chỉnh card padding */
-    .service-card {
-        padding: 25px 20px;
-    }
-    
-    /* Đảm bảo images responsive */
-    img {
-        max-width: 100%;
-        height: auto;
     }
 }
 
